@@ -32,7 +32,7 @@ export default function Search() {
           (a) => a.title && a.title !== "[Removed]",
         );
         setArticles(valid);
-        setTotalResults(data.totalResults || 0);
+        setTotalResults(data.totalArticles || 0);
       } catch {
         setError("Search failed. Please try again.");
       } finally {

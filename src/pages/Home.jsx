@@ -22,8 +22,12 @@ export default function Home() {
         (a) => a.title && a.title !== "[Removed]",
       );
       setArticles(valid);
-      setTotalResults(data.totalResults || 0);
-    } catch {
+      setTotalResults(data.totalArticles || 0);
+    } catch (err) {
+      console.error(
+        "fetchTopHeadlines error:",
+        err?.response?.data || err?.message || err,
+      );
       setError("Failed to load news. Please check your API key and try again.");
     } finally {
       setLoading(false);

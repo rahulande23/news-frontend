@@ -15,8 +15,9 @@ function timeAgo(dateStr) {
 }
 
 export default function NewsCard({ article, featured = false }) {
-  const { title, description, url, urlToImage, source, publishedAt } = article;
-  const img = urlToImage || FALLBACK;
+  const { title, description, url, image, urlToImage, source, publishedAt } =
+    article;
+  const img = image || urlToImage || FALLBACK;
 
   return (
     <a
