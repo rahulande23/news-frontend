@@ -1,0 +1,139 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 15, 19, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.logo-icon {
+  color: var(--accent2);
+  font-size: 1.4rem;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #fff 30%, var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.search-form {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  max-width: 520px;
+}
+
+.search-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--text2);
+  pointer-events: none;
+}
+
+.search-wrap input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-wrap input:focus {
+  border-color: var(--accent);
+}
+
+.search-wrap input::placeholder {
+  color: var(--text2);
+}
+
+.search-btn {
+  padding: 8px 18px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+  white-space: nowrap;
+}
+
+.search-btn:hover {
+  background: #5a52d5;
+}
+.search-btn:active {
+  transform: scale(0.97);
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text2);
+  transition: all 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+  background: var(--bg3);
+}
+.nav-links a.active {
+  color: var(--accent2);
+  background: rgba(108, 99, 255, 0.12);
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+  .search-btn {
+    display: none;
+  }
+}
